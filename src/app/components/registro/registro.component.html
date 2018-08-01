@@ -1,9 +1,29 @@
-<form class="example-form" style="background-color: #fff;">
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Favorite food" value="Sushi">
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-        <textarea matInput placeholder="Leave a comment"></textarea>
-    </mat-form-field>
-</form>
+<fieldset>
+    <div class="example-container" fxLayout="row wrap">
+        <div fxLayoutAlign="space-around center">
+            <mat-form-field fxFlex="48">
+                <input matInput placeholder="Documento Electoral">
+            </mat-form-field>
+            <mat-form-field fxFlex="48">
+                <input matInput placeholder="Nombres">
+            </mat-form-field>
+        </div>
+        <div fxLayoutAlign="space-around center">
+            <mat-form-field fxFlex="48">
+                <input matInput placeholder="Apellido Paterno">
+            </mat-form-field>
+            <mat-form-field fxFlex="48">
+                <input matInput placeholder="Apellido Materno">
+            </mat-form-field>
+        </div>
+        <div fxLayoutAlign="space-around center">
+            <mat-form-field fxFlex="48">
+                <mat-select placeholder="Genero">
+                    <mat-option value="M">Masculino</mat-option>
+                    <mat-option value="F">Femenino</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button fxFlex="48" mat-stroked-button color="primary">Guardar</button>
+        </div>
+    </div>
+</fieldset>

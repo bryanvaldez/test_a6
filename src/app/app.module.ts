@@ -6,12 +6,14 @@ import { MaterialModule } from './material';
 import { HeaderComponent } from './components/header/header.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    RegistroComponent
+    RegistroComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
