@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PadronService } from '../../services/padron.service';
 
 @Component({
   selector: 'app-list',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   private lists: Array<any> ;
-  constructor() {
+  constructor(private _padronService: PadronService) {
     this.lists = [
       {'key': 'stuWheelchair', 'label': 'Wheelchair', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},
       {'key': 'stuWheelchair', 'label': 'Wheelchair', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},

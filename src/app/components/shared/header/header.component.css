@@ -1,0 +1,26 @@
+/* Custom Material */
+
+.mat-mini-fab:not([class*=mat-elevation-z]) {
+    transition: none;
+    box-shadow: none;
+}
+
+
+/* Own Css */
+
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.iconheader {
+    margin: 0;
+    padding: 0;
+}
+
+.btnHeader {
+    background-color: transparent;
+}

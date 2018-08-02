@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>SISTEMA TEST 01</span>
+        <span class="example-spacer"></span>
+        <button mat-button [matMenuTriggerFor]="menu">Registro</button>
+        <button class="btnHeader" mat-mini-fab>
+            <mat-icon matTooltip="Salir del Sistema" matTooltipPosition="below" class="iconHeader">
+                exit_to_app
+            </mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['home']">Dashboard</button>
+    <button mat-menu-item [routerLink]="['register']">Register Users</button>
+    <button mat-menu-item [routerLink]="['list']">List Users</button>
+    <button mat-menu-item [routerLink]="['about']">About</button>
+</mat-menu>
