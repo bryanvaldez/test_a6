@@ -1,6 +1,6 @@
 <fieldset>
     <mat-selection-list>
-        <mat-list-option *ngFor="let list of listPadron">
+        <mat-list-option [routerLink]="['/register', key]" *ngFor="let list of listPadron">
             {{ list.label }}
         </mat-list-option>
     </mat-selection-list>

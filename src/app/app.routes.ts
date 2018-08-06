@@ -10,6 +10,7 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'register', component: RegistroComponent },
+    { path: 'register/:id', component: RegistroComponent },    
     { path: 'list', component: ListComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
