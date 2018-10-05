@@ -1,0 +1,9 @@
+.module {
+    padding-top: 20px;
+    background-color: #fff;
+    height: 100%;
+}
+
+app-item {
+    margin: 3px;
+}

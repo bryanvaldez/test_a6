@@ -5,12 +5,17 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ListComponent } from './components/list/list.component';
+import { SearchComponent } from './components/search/search.component';
+import { CardsComponent } from './components/cards/cards.component';
+
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'register', component: RegistroComponent },
-    { path: 'register/:id', component: RegistroComponent },    
+    { path: 'cards', component: CardsComponent },
+    { path: 'register/:id', component: RegistroComponent },
+    { path: 'search/:text', component: SearchComponent },
     { path: 'list', component: ListComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];

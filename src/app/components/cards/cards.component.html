@@ -1,0 +1,6 @@
+<div fxLayout="column">
+    <div class="module" fxLayout="row wrap" fxLayoutAlign="center center">
+        <app-item (emitCard)="submit($event)" [item]="item" fxFlex="24" fxFlex.lt-sm="100" *ngFor="let item of list">
+        </app-item>
+    </div>
+</div>

@@ -9,6 +9,7 @@ import {
     MatSelectModule,
     MatInputModule,
     MatListModule,
+    MatCardModule,
     MatTooltipModule
 } from '@angular/material';
 
@@ -23,6 +24,7 @@ import {
       MatSelectModule,
       MatInputModule,
       MatListModule,
+      MatCardModule,
       MatTooltipModule
     ],
   exports: [
@@ -35,6 +37,7 @@ import {
       MatSelectModule,
       MatInputModule,
       MatListModule,
+      MatCardModule,
       MatTooltipModule
     ],
 })

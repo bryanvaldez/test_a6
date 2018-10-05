@@ -15,6 +15,9 @@ import { FeatureRoutingModule } from './app.routes';
 
 // Services
 import { PadronService } from './services/padron.service';
+import { SearchComponent } from './components/search/search.component';
+import { ItemComponent } from './components/item/item.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { PadronService } from './services/padron.service';
     RegistroComponent,
     ListComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent,
+    ItemComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
