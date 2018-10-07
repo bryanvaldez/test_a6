@@ -18,6 +18,7 @@ import { PadronService } from './services/padron.service';
 import { SearchComponent } from './components/search/search.component';
 import { ItemComponent } from './components/item/item.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CardsComponent } from './components/cards/cards.component';
     HomeComponent,
     SearchComponent,
     ItemComponent,
-    CardsComponent
+    CardsComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
