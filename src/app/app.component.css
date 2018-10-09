@@ -1,0 +1,11 @@
+html {
+    display: flex;
+    min-height: 100%;
+}
+
+app-root,
+router-outlet,
+app-header {
+    display: flex;
+    min-height: 100%;
+}
