@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Padron } from '../models/padron.model';
 
 @Injectable()
 export class PadronService {
@@ -30,13 +31,3 @@ export class PadronService {
     }
 }
 
-export interface Padron {
-    key: String;
-    label: String;
-    required: boolean;
-    order: number;
-    controlType: String;
-    visible: boolean;
-    disabled: boolean;
-    type: String;
-  }

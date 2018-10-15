@@ -1,7 +1,8 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { PadronService, Padron} from '../../services/padron.service';
+import { PadronService} from '../../services/padron.service';
 import { Router } from '@angular/router';
+import { Padron } from '../../models/padron.model';
 
 @Component({
   selector: 'app-list',

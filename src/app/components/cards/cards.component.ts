@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Padron, PadronService } from '../../services/padron.service';
+import { PadronService } from '../../services/padron.service';
+import { Padron } from 'src/app/models/padron.model';
+
 
 
 @Component({

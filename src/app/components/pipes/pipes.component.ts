@@ -1,3 +1,5 @@
+import { PadronService } from '../../services/padron.service';
+import { Padron } from '../../models/padron.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent implements OnInit {
 
-  constructor() { }
+  public listPadron: Padron[];
+
+  constructor(
+    private _padronService: PadronService
+  ) { }
 
   ngOnInit() {
   }

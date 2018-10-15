@@ -1,6 +1,7 @@
-import { PadronService, Padron } from '../../services/padron.service';
+import { PadronService } from '../../services/padron.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Padron } from 'src/app/models/padron.model';
 
 @Component({
   selector: 'app-search',
