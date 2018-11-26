@@ -19,6 +19,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ItemComponent } from './components/item/item.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PipesComponent } from './components/pipes/pipes.component';
     SearchComponent,
     ItemComponent,
     CardsComponent,
-    PipesComponent
+    PipesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

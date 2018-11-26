@@ -1,5 +1,10 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
+<mat-toolbar>
+
+    <mat-toolbar-row class="nav-header">
+        <div fxFlex="20" class="logo"><img src="assets/img/cdmx.png"></div>
+        <div fxFlex="80" class="title">ISSEMyM</div>
+    </mat-toolbar-row>
+    <!-- <mat-toolbar-row>
         <span>SISTEMA TEST 01</span>
         <span class="example-spacer"></span>
         <button mat-button [matMenuTriggerFor]="menu">Registro</button>
@@ -8,7 +13,7 @@
                 exit_to_app
             </mat-icon>
         </button>
-    </mat-toolbar-row>
+    </mat-toolbar-row> -->
 </mat-toolbar>
 
 <mat-menu #menu="matMenu">

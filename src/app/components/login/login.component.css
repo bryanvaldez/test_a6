@@ -1,0 +1,9 @@
+.loginForm {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    padding: 30px;
+    border-radius: 10px;
+    /* border: 0.5px solid #000; */
+    height: 100%;
+}

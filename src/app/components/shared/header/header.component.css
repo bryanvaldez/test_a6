@@ -1,5 +1,37 @@
 /* Custom Material */
 
+.nav-header {
+    /* height: 100px; */
+    height: 100%;
+}
+
+.nav-header .logo {
+    display: flex;
+    height: 100%;
+    background: #f0f0f0;
+    border-bottom: rgb(195, 195, 195) 5px solid;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-header .logo img {
+    max-width: 80%;
+    height: auto;
+    box-sizing: border-box;
+    border: 0;
+    vertical-align: middle;
+}
+
+.nav-header .title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #5A6523;
+    font-size: 30px;
+    border-bottom: #879E0F 5px solid;
+    padding-left: 15px;
+}
+
 .mat-mini-fab:not([class*=mat-elevation-z]) {
     transition: none;
     box-shadow: none;

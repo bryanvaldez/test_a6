@@ -1,6 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
+
+import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { RegistroComponent } from './components/registro/registro.component';
@@ -11,6 +13,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
 
 
 const routes: Routes = [
+    { path: 'login', component: LoginComponent },
     { path: 'home', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'register', component: RegistroComponent },
@@ -19,7 +22,7 @@ const routes: Routes = [
     { path: 'register/:id', component: RegistroComponent },
     { path: 'search/:text', component: SearchComponent },
     { path: 'list', component: ListComponent },
-    { path: '**', pathMatch: 'full', redirectTo: 'home' },
+    { path: '**', pathMatch: 'full', redirectTo: 'login' },
 ];
 
 @NgModule({

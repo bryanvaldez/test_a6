@@ -16,6 +16,7 @@ export class PipesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.listPadron = this._padronService.getListPadron();
   }
 
 }
