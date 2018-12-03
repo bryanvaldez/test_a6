@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -7,4 +8,26 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
     name: 'Header Base Project';
+
+    public active: String;
+
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router
+        ) { 
+         }
+
+    ngOnInit() {
+        this.active = sessionStorage.getItem('token');
+    }    
+
+    logout(){    
+        sessionStorage.setItem('token', '');
+        this.router.navigate(['login']);        
+    }
+    activeSession(){
+        return sessionStorage.getItem('token') != '';
+    }
+
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PadronService } from '../../services/padron.service';
 import { Padron } from 'src/app/models/padron.model';
+import {FormControl, Validators} from '@angular/forms';
 
 
 

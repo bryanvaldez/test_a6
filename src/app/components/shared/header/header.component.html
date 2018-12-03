@@ -4,11 +4,10 @@
         <div fxFlex="20" class="logo"><img src="assets/img/cdmx.png"></div>
         <div fxFlex="80" class="title">ISSEMyM</div>
     </mat-toolbar-row>
-    <mat-toolbar-row>
-        <span>SISTEMA TEST 01</span>
+    <mat-toolbar-row *ngIf="activeSession()">
+        <span>Usuario:</span>
         <span class="example-spacer"></span>
-        <button mat-button [matMenuTriggerFor]="menu">Registro</button>
-        <button class="btnHeader" mat-mini-fab>
+        <button style="color: #000;" (click)="logout()" class="btnHeader" mat-mini-fab>
             <mat-icon matTooltip="Salir del Sistema" matTooltipPosition="below" class="iconHeader">
                 exit_to_app
             </mat-icon>

@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Información de Cuenta</h1>
+<div mat-dialog-content>
+    <form [formGroup]="form" id="form" (ngSubmit)=" onSubmit()" novalidate>
+        <mat-card-content fxLayout="row wrap">
+
+            <mat-form-field fxFlex="100" style="margin-bottom: 15px;">
+                <input type="text" formControlName="SNombres" matInput placeholder="Nombres" maxlength="50" required>
+                <mat-error *ngIf="f.SNombres.invalid && f.SNombres.errors.required">Este campo es requerido.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="100" style="margin-bottom: 15px;">
+                <input type="text" formControlName="SApaterno" matInput placeholder="Apellido Paterno" maxlength="50" required>
+                <mat-error *ngIf="f.SApaterno.errors && f.SApaterno.errors.required">Este campo es requerido.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="100" style="margin-bottom: 15px;">
+                <input type="text" formControlName="SAmaterno" matInput placeholder="Apellido Materno" maxlength="50" required>
+                <mat-error *ngIf="f.SAmaterno.errors && f.SAmaterno.errors.required">Este campo es requerido.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="100" style="margin-bottom: 15px;">
+                <input type="text" formControlName="SMail" matInput placeholder="Correo Electronico" maxlength="50" required>
+                <mat-error *ngIf="f.SMail.errors && f.SMail.errors.required">Este campo es requerido.</mat-error>
+                <mat-error *ngIf="f.SMail.errors && f.SMail.errors.email">Correo invalido.</mat-error>
+            </mat-form-field>
+
+        </mat-card-content>
+    </form>
+</div>
+<div mat-dialog-actions fxLayoutAlign="space-between start">
+    <button [disabled]="!form.valid" type="submit" form="form" mat-stroked-button color="primary" fxFlex="45" mat-button>Registrar</button>
+    <button (click)="onNoClick()" mat-stroked-button color="primary" fxFlex="45" mat-button>Cancelar</button>
+</div>

@@ -8,10 +8,10 @@ export class PadronService {
 
     constructor() {
         this.list = [
-            {'key': '1', 'label': 'Bryan Luis', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},
-            {'key': '2', 'label': 'Bryan Jose', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},
-            {'key': '3', 'label': 'Edgar', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},
-            {'key': '4', 'label': 'Roger', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},
+            {'key': '1', 'label': 'Modulo 1', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},
+            {'key': '2', 'label': 'Modulo 2', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},
+            {'key': '3', 'label': 'Modulo 3', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},
+            {'key': '4', 'label': 'Modulo 4', 'required': false, 'order': 1, 'controlType': 'checkbox', 'visible': true, 'disabled': true, 'type': ''},
         ];
     }
 

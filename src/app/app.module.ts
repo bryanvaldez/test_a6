@@ -14,13 +14,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Routes
 import { FeatureRoutingModule } from './app.routes';
 
-// Services
-import { PadronService } from './services/padron.service';
+//Components
 import { SearchComponent } from './components/search/search.component';
 import { ItemComponent } from './components/item/item.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { LoginComponent } from './components/login/login.component';
+import { CreateComponent } from './components/modal/user/create/create.component';
+
+// Services
+import { PadronService } from './services/padron.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { LoginComponent } from './components/login/login.component';
     ItemComponent,
     CardsComponent,
     PipesComponent,
-    LoginComponent
+    LoginComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,9 @@ import { LoginComponent } from './components/login/login.component';
     FormsModule,
     ReactiveFormsModule
   ],
+  entryComponents: [
+    CreateComponent
+  ],  
   providers: [
     PadronService
   ],
