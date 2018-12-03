@@ -1,24 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Params } from 'src/app/constants/params.constant';
 
 @Injectable({
-    providedIn:'root'
+    providedIn: 'root'
 })
 export class UserService {
 
-    constructor(private http:HttpClient){
-        console.log("servicio usuario listo");
+    constructor(private http: HttpClient) {
+        console.log('service User');
     }
-
-    save(data: any){
-        const url = 'http://localhost:8080/user/create';
-   
-        console.log(data);    
-        this.http.post(url, data)
-        .subscribe(data =>{
-            console.log(data);
-        });        
-        
+    save(data: any) {
+        return this.http.post(Params.SERVER_URL + 'user/create', data);
     }
-
 }

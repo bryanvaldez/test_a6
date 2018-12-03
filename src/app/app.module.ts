@@ -14,7 +14,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Routes
 import { FeatureRoutingModule } from './app.routes';
 
-//Components
+// Secutiry
+import { AuthGuard } from './auth.guard';
+
+// Components
 import { SearchComponent } from './components/search/search.component';
 import { ItemComponent } from './components/item/item.component';
 import { CardsComponent } from './components/cards/cards.component';
@@ -52,8 +55,9 @@ import { PadronService } from './services/padron.service';
   ],
   entryComponents: [
     CreateComponent
-  ],  
+  ],
   providers: [
+    AuthGuard,
     PadronService
   ],
   bootstrap: [AppComponent]

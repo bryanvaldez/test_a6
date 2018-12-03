@@ -29,15 +29,10 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private http: HttpClient,
     private _userService: UserService
-    ) { 
-      this.user = {
-        'SApaterno': '',
-        'SAmaterno': '',
-        'SNombres': '',
-        'SMail': '',
-        'SDireccion': '',
-        'STmovil': ''
-      };
+    ) {
+        if ( localStorage.getItem('isLoggedIn') === 'true') {
+          this.router.navigate(['main']);
+        }
 
      }
 
@@ -51,8 +46,10 @@ export class LoginComponent implements OnInit {
 
     this.http.post<HttpResponse<any>>(url, data, { headers: hdrs, observe: 'response'} )
     .subscribe(
-      (data: HttpResponse<any>) => {
-        sessionStorage.setItem('token', data.headers.get('authorization'));
+      (dataResponse: HttpResponse<any>) => {
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('token', dataResponse.headers.get('authorization'));
+        sessionStorage.setItem('token', dataResponse.headers.get('authorization'));
         this.router.navigate(['main']);
       },
       error => {
@@ -82,19 +79,13 @@ export class LoginComponent implements OnInit {
 
    openDialog(): void {
     const dialogRef = this.dialog.open(CreateComponent, {
-      width: '700px',
-      data: {
-        SApaterno : this.user.SApaterno,
-        SAmaterno : this.user.SAmaterno,
-        SNombres : this.user.SNombres,
-        SMail : this.user.SMail,
-        SDireccion : this.user.SDireccion,
-        STmovil : this.user.STmovil
-      }
+      width: '500px'
     });
-    dialogRef.afterClosed().subscribe(data => {
-      if (data) {
-        this._userService.save(data);
+    dialogRef.afterClosed().subscribe(dataRequest => {
+      if (dataRequest) {
+        this._userService.save(dataRequest).subscribe(dataResponse => {
+          console.log(dataResponse);
+        });
       }
     });
   }

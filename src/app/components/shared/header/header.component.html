@@ -1,16 +1,24 @@
-<mat-toolbar>
-
-    <mat-toolbar-row class="nav-header">
+<mat-toolbar fxLayout="column" style="height: 100%;">
+    <mat-toolbar-row fxFlex="75" class="nav-header" style="height: 100%;" style="background: #fff;">
         <div fxFlex="20" class="logo"><img src="assets/img/cdmx.png"></div>
         <div fxFlex="80" class="title">ISSEMyM</div>
     </mat-toolbar-row>
-    <mat-toolbar-row *ngIf="activeSession()">
-        <span>Usuario:</span>
+    <mat-toolbar-row fxLayout="row" fxFlex="25" fxLayoutAlign="center center" *ngIf="activeSession()" style="height: 100%;">
+
+        <button mat-icon-button fxFlex="10">
+            <mat-icon aria-label="Example">home</mat-icon>
+            <span style="padding: 7px;">Inicio</span>
+        </button>
+        <button mat-icon-button fxFlex="10">
+            <mat-icon aria-label="Example">vpn_key</mat-icon>
+            <span style="padding: 7px;">Opcion 1</span>
+        </button>
         <span class="example-spacer"></span>
-        <button style="color: #000;" (click)="logout()" class="btnHeader" mat-mini-fab>
+        <button style="color: #000;" (click)="logout()" class="btnHeader" fxFlex="10" mat-mini-fab>
             <mat-icon matTooltip="Salir del Sistema" matTooltipPosition="below" class="iconHeader">
                 exit_to_app
             </mat-icon>
+            <span style="padding: 7px;">Salir</span>
         </button>
     </mat-toolbar-row>
 </mat-toolbar>

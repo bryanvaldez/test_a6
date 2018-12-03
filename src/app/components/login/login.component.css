@@ -29,3 +29,9 @@
 .idcEnlace:hover {
     text-decoration: underline;
 }
+
+.bg_main {
+    background: url(/assets/img/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}

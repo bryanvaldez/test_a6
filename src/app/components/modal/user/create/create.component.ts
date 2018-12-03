@@ -2,6 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { User } from 'src/app/models/user.model';
+import { Directive, ElementRef, HostListener } from '@angular/core';
+
 
 @Component({
   selector: 'app-create',
@@ -30,8 +32,7 @@ export class CreateComponent implements OnInit{
       samaterno: ['', Validators.required],
       snombres: ['', Validators.required],
       smail: ['', [Validators.required, Validators.email]],
-      sdireccion: ['', ],
-      stmovil: ['', ],
+      spwd: ['', Validators.required]
     });
   }
 
@@ -46,3 +47,15 @@ export class CreateComponent implements OnInit{
   }
 }
 
+// @Directive({
+//   selector: '[appUpper]'
+// })
+// export class UpperDirective {
+
+//   constructor(public ref: ElementRef) { }
+
+//   @HostListener('input', ['$event']) onInput(event) {
+//     this.ref.nativeElement.value = event.target.value.toUpperCase();
+//   }
+
+// }
