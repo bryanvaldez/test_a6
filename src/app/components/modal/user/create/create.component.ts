@@ -8,14 +8,13 @@ import { User } from 'src/app/models/user.model';
   templateUrl: './create.component.html'
 })
 export class CreateComponent implements OnInit{
-  
   form: FormGroup;
   user = {
-    'SApaterno': '', 
-    'SAmaterno': '', 
+    'SApaterno': '',
+    'SAmaterno': '',
     'SNombres': '',
-    'SMail': '', 
-    'SDireccion': '', 
+    'SMail': '',
+    'SDireccion': '',
     'STmovil': '',
   };
 
@@ -27,23 +26,23 @@ export class CreateComponent implements OnInit{
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      SApaterno:['', Validators.required],
-      SAmaterno:['', Validators.required],
-      SNombres:['', Validators.required],
-      SMail:['', [Validators.required, Validators.email]],
-      SDireccion:['', ],
-      STmovil:['', ],
+      sapaterno: ['', Validators.required],
+      samaterno: ['', Validators.required],
+      snombres: ['', Validators.required],
+      smail: ['', [Validators.required, Validators.email]],
+      sdireccion: ['', ],
+      stmovil: ['', ],
     });
-  }  
+  }
 
   get f() { return this.form.controls; }
 
-  onNoClick() {    
+  onNoClick() {
     this.dialogRef.close();
   }
 
-  onSubmit(){
+  onSubmit() {
     this.dialogRef.close(this.form.value);
   }
-  
 }
+

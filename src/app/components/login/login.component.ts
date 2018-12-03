@@ -19,10 +19,9 @@ import { UserService } from '../../services/user.service';
 export class LoginComponent implements OnInit {
 
   model: any = {};
-  message: String = "";
+  message: String = '';
   private user: User;
 
-  
 
   constructor(
     public dialog: MatDialog,
@@ -32,12 +31,12 @@ export class LoginComponent implements OnInit {
     private _userService: UserService
     ) { 
       this.user = {
-        'SApaterno': '', 
-        'SAmaterno': '', 
+        'SApaterno': '',
+        'SAmaterno': '',
         'SNombres': '',
-        'SMail': '', 
-        'SDireccion': '', 
-        'STmovil': '',
+        'SMail': '',
+        'SDireccion': '',
+        'STmovil': ''
       };
 
      }
@@ -53,50 +52,50 @@ export class LoginComponent implements OnInit {
     this.http.post<HttpResponse<any>>(url, data, { headers: hdrs, observe: 'response'} )
     .subscribe(
       (data: HttpResponse<any>) => {
-        console.log("fsdfsd");
         sessionStorage.setItem('token', data.headers.get('authorization'));
         this.router.navigate(['main']);
-      }, 
-      error =>{
-        console.log("Usuario y/o Contrasea incorrecta");
-        this.message = "Usuario y/o Clave incorrecta.";
+      },
+      error => {
+        console.log('Usuario y/o Contrasea incorrecta');
+        this.message = 'Usuario y/o Clave incorrecta.';
       }
     );
    }
 
-   clean(){
-      this.message = "";
+   clean() {
+      this.message = '';
    }
 
-   iModal(type){
+   iModal(type) {
     switch (type) {
-      case Types.M_USER_CREATE: 
+      case Types.M_USER_CREATE:
           this.openDialog();
         break;
-      case Types.M_PASS_FORGOT:        
-        break;    
-      case Types.M_PASS_CHANGE:        
-        break;        
-      case Types.M_CLOSE:        
-        break; 
+      case Types.M_PASS_FORGOT:
+        break;
+      case Types.M_PASS_CHANGE:
+        break;
+      case Types.M_CLOSE:
+        break;
     }
    }
 
    openDialog(): void {
-    let dialogRef = this.dialog.open(CreateComponent, {
+    const dialogRef = this.dialog.open(CreateComponent, {
       width: '700px',
       data: {
         SApaterno : this.user.SApaterno,
-        SAmaterno : this.user.SAmaterno, 
+        SAmaterno : this.user.SAmaterno,
         SNombres : this.user.SNombres,
-        SMail : this.user.SMail, 
+        SMail : this.user.SMail,
         SDireccion : this.user.SDireccion,
-        STmovil : this.user.STmovil  
+        STmovil : this.user.STmovil
       }
     });
-    dialogRef.afterClosed().subscribe(data => {  
-      this._userService.save(data);            
+    dialogRef.afterClosed().subscribe(data => {
+      if (data) {
+        this._userService.save(data);
+      }
     });
-  }   
-
+  }
 }

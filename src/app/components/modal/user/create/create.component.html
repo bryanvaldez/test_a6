@@ -4,24 +4,24 @@
         <mat-card-content fxLayout="row wrap">
 
             <mat-form-field fxFlex="100" style="margin-bottom: 15px;">
-                <input type="text" formControlName="SNombres" matInput placeholder="Nombres" maxlength="50" required>
-                <mat-error *ngIf="f.SNombres.invalid && f.SNombres.errors.required">Este campo es requerido.</mat-error>
+                <input type="text" formControlName="snombres" matInput placeholder="Nombres" maxlength="50" required>
+                <mat-error *ngIf="!!f.snombres.invalid && !!f.snombres.errors.required">Este campo es requerido.</mat-error>
             </mat-form-field>
 
             <mat-form-field fxFlex="100" style="margin-bottom: 15px;">
-                <input type="text" formControlName="SApaterno" matInput placeholder="Apellido Paterno" maxlength="50" required>
-                <mat-error *ngIf="f.SApaterno.errors && f.SApaterno.errors.required">Este campo es requerido.</mat-error>
+                <input type="text" formControlName="sapaterno" matInput placeholder="Apellido Paterno" maxlength="50" required>
+                <mat-error *ngIf="!!f.sapaterno.errors && !!f.sapaterno.errors.required">Este campo es requerido.</mat-error>
             </mat-form-field>
 
             <mat-form-field fxFlex="100" style="margin-bottom: 15px;">
-                <input type="text" formControlName="SAmaterno" matInput placeholder="Apellido Materno" maxlength="50" required>
-                <mat-error *ngIf="f.SAmaterno.errors && f.SAmaterno.errors.required">Este campo es requerido.</mat-error>
+                <input type="text" formControlName="samaterno" matInput placeholder="Apellido Materno" maxlength="50" required>
+                <mat-error *ngIf="!!f.samaterno.errors && !!f.samaterno.errors.required">Este campo es requerido.</mat-error>
             </mat-form-field>
 
             <mat-form-field fxFlex="100" style="margin-bottom: 15px;">
-                <input type="text" formControlName="SMail" matInput placeholder="Correo Electronico" maxlength="50" required>
-                <mat-error *ngIf="f.SMail.errors && f.SMail.errors.required">Este campo es requerido.</mat-error>
-                <mat-error *ngIf="f.SMail.errors && f.SMail.errors.email">Correo invalido.</mat-error>
+                <input type="text" formControlName="smail" matInput placeholder="Correo Electronico" maxlength="50" required>
+                <mat-error *ngIf="!!f.smail.errors && !!f.smail.errors.required">Este campo es requerido.</mat-error>
+                <mat-error *ngIf="!!f.smail.errors && !!f.smail.errors.email">Correo invalido.</mat-error>
             </mat-form-field>
 
         </mat-card-content>
