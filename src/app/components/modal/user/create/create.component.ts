@@ -32,7 +32,8 @@ export class CreateComponent implements OnInit{
       samaterno: ['', Validators.required],
       snombres: ['', Validators.required],
       smail: ['', [Validators.required, Validators.email]],
-      spwd: ['', Validators.required]
+      spwd: ['', Validators.required],
+      spwd0: ['', Validators.required]
     });
   }
 
