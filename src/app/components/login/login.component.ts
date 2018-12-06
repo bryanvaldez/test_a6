@@ -47,14 +47,18 @@ export class LoginComponent implements OnInit {
     this.http.post<HttpResponse<any>>(url, data, { headers: hdrs, observe: 'response'} )
     .subscribe(
       (dataResponse: HttpResponse<any>) => {
+        console.log(dataResponse);
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('token', dataResponse.headers.get('authorization'));
         sessionStorage.setItem('token', dataResponse.headers.get('authorization'));
         this.router.navigate(['main']);
       },
       error => {
-        console.log('Usuario y/o Contrasea incorrecta');
-        this.message = 'Usuario y/o Clave incorrecta.';
+        if (error.status === 403) {
+          this.message = 'Usuario y/o Clave incorrecta.';
+        } else {
+          this.message = 'Error de conexión';
+        }
       }
     );
    }
@@ -82,6 +86,7 @@ export class LoginComponent implements OnInit {
       width: '500px'
     });
     dialogRef.afterClosed().subscribe(dataRequest => {
+      console.log(dataRequest);
       if (dataRequest) {
         this._userService.save(dataRequest).subscribe(dataResponse => {
           console.log(dataResponse);

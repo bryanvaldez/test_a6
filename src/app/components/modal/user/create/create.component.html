@@ -33,19 +33,19 @@
             <h3 style="text-decoration: underline;">Ingrese su palabra clave y repitala</h3>
 
             <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
-                <mat-form-field fxFlex="49">
-                    <input type="password" formControlName="spwd" matInput placeholder="Palabra Clave" autocomplete="off" maxlength="20" required>
+                <mat-form-field fxFlex="100">
+                    <input type="password" formControlName="spwd" [(ngModel)]="word" matInput placeholder="Palabra Clave" autocomplete="off" maxlength="20" required>
                     <mat-error *ngIf="!!f.spwd.errors && !!f.spwd.errors.required">Este campo es requerido.</mat-error>
                     <mat-icon matSuffix>vpn_key</mat-icon>
                 </mat-form-field>
-                <mat-form-field fxFlex="49">
-                    <input type="password" formControlName="spwd0" matInput placeholder="Palabra Clave(r)" autocomplete="off" maxlength="20" [required]="">
-                    <mat-error *ngIf="!!f.spwd0.errors && !!f.spwd0.errors.required">Este campo es requerido.</mat-error>
+                <!-- <mat-form-field fxFlex="49">
+                    <input type="password" formControlName="spwd" matInput placeholder="Palabra Clave(r)" autocomplete="off" maxlength="20" [required]="">
+                    <mat-error *ngIf="!!f.spwd.errors && !!f.spwd.errors.required">Este campo es requerido.</mat-error>
+                    <mat-error *ngIf="!!f.spwd.errors && !!f.spwd.errors.same">Custom.</mat-error>
                     <mat-icon matSuffix>vpn_key</mat-icon>
-                </mat-form-field>
+                </mat-form-field> -->
             </div>
-            <p>{{form.controls.spwd.value }} | {{form.controls.spwd0.value }} </p>
-
+            <!-- <p>{{form.controls.spwd.value }} | {{form.controls.spwd0.value }} </p> -->
         </mat-card-content>
     </form>
 </div>

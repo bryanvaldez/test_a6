@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { User } from 'src/app/models/user.model';
 import { Directive, ElementRef, HostListener } from '@angular/core';
@@ -9,7 +9,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
   selector: 'app-create',
   templateUrl: './create.component.html'
 })
-export class CreateComponent implements OnInit{
+export class CreateComponent implements OnInit {
   form: FormGroup;
   user = {
     'SApaterno': '',
@@ -19,6 +19,7 @@ export class CreateComponent implements OnInit{
     'SDireccion': '',
     'STmovil': '',
   };
+  word = '';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -32,10 +33,21 @@ export class CreateComponent implements OnInit{
       samaterno: ['', Validators.required],
       snombres: ['', Validators.required],
       smail: ['', [Validators.required, Validators.email]],
-      spwd: ['', Validators.required],
-      spwd0: ['', Validators.required]
+      // spwd: ['', [Validators.required, this.forbiddenNameValidator()]],
+      spwd: ['', Validators.required ]
     });
   }
+
+  // forbiddenNameValidator(): ValidatorFn {
+  //   return (control: AbstractControl): {[key: string]: boolean} | null => {
+  //     if (control.value === this.word) {
+  //       return {'same': false};
+  //     } else {
+  //       return {'same': true};
+  //     }
+  //     return null;
+  //   };
+  // }
 
   get f() { return this.form.controls; }
 
