@@ -27,6 +27,7 @@ import { CreateComponent } from './components/modal/user/create/create.component
 
 // Services
 import { PadronService } from './services/padron.service';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PadronService } from './services/padron.service';
     CardsComponent,
     PipesComponent,
     LoginComponent,
-    CreateComponent
+    CreateComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,

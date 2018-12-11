@@ -10,7 +10,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background: #363c5d;
+    /* background: #363c5d; */
     /* background: linear-gradient(to top, rgb(148, 142, 153), rgb(46, 20, 55));
     height: calc(100vh - 86px); */
 }

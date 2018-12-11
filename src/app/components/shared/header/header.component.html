@@ -5,10 +5,9 @@
     </mat-toolbar-row>
     <mat-toolbar-row fxLayout="row" fxFlex="25" fxLayoutAlign="center center" *ngIf="activeSession()" style="height: 100%;">
 
-        <button mat-icon-button fxFlex="10">
-            <mat-icon aria-label="Example">folder_shared</mat-icon>
-            <span style="padding: 7px;">Gestión de archivos</span>
-        </button>
+
+        <span style="padding: 7px;">Perfil | Nombres y Apellidos</span>
+
         <span class="example-spacer"></span>
         <button style="color: #000;" (click)="logout()" class="btnHeader" fxFlex="10" mat-mini-fab>
             <mat-icon matTooltip="Salir del Sistema" matTooltipPosition="below" class="iconHeader">
